@@ -1,0 +1,70 @@
+.fantasia-section {
+    padding: 20px;
+    background-color: #f0f0f0; 
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .buscar-por-etiquetas {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #etiquetas {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .etiquetas-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .etiqueta-button {
+    background-color: #BA9463; 
+    color: #fff; 
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .etiqueta-button:hover {
+    background-color: #A57D49; 
+  }
+  
+  .libros-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .libro-card {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .libro-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .libro-info h3 {
+    font-size: 16px;
+    color: #333;
+  }
+  

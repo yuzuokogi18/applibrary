@@ -1,0 +1,62 @@
+/* libro.component.css */
+.book-detail {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .book-detail h2 {
+    color: #007BFF; 
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  
+  .book-content {
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .book-detail img {
+    max-width: 450px;
+    height: auto;
+    border-radius: 5px; 
+    margin-right: 20px; 
+  }
+  
+  .book-description {
+    flex: 1; 
+  }
+  
+  .book-detail h3 {
+    color: #333; 
+    margin: 10px 0; 
+  }
+  
+  .book-detail p {
+    color: #555; 
+    line-height: 1.5; 
+    margin: 5px 0; 
+  }
+  
+  .book-detail strong {
+    color: #007BFF; 
+  }
+  .read-button {
+    background-color: #007BFF; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    font-size: 16px;
+    cursor: pointer; 
+    margin-top: 15px; 
+    transition: background-color 0.3s; 
+  }
+  
+  .read-button:hover {
+    background-color: #0056b3; 
+  }
+  

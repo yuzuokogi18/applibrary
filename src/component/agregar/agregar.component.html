@@ -1,0 +1,55 @@
+<div class="agregar-libro">
+    <h2>Agregar Libro</h2>
+  
+    <div class="form-group">
+      <label for="title">Título:</label>
+      <input 
+        id="title" 
+        type="text" 
+        placeholder="Escribe el título del libro" 
+        (input)="actualizarTitle($event)" 
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="author">Autor:</label>
+      <input 
+        id="author" 
+        type="text" 
+        placeholder="Escribe el nombre del autor" 
+        (input)="actualizarAuthor($event)" 
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="genre">Género:</label>
+      <input 
+        id="genre" 
+        type="text" 
+        placeholder="Escribe el género del libro" 
+        (input)="actualizarGenre($event)" 
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="pageCount">Número de Páginas:</label>
+      <input 
+        id="pageCount" 
+        type="number" 
+        placeholder="Escribe el número de páginas" 
+        (input)="actualizarPageCount($event)" 
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="descripcion">Descripción:</label>
+      <textarea 
+        id="descripcion" 
+        placeholder="Escribe una descripción del libro" 
+        (input)="actualizarDescripcion($event)"
+      ></textarea>
+    </div>
+  
+    <button (click)="agregarLibro()">Agregar Libro</button>
+  </div>
+  

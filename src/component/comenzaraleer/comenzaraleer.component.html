@@ -1,0 +1,10 @@
+<h2>Contenido del Libro</h2>
+<div *ngIf="selectedBookContent; else noBook">
+  <p>{{ selectedBookContent }}</p>
+</div>
+<ng-template #noBook>
+  <p>No se encontró el contenido del libro.</p>
+</ng-template>
+
+<p class="inicia-sesion-text">Para seguir leyendo, inicia sesión o regístrate</p>
+<app-login></app-login>

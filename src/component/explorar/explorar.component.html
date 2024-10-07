@@ -1,0 +1,53 @@
+<div class="main-layout">
+    <div class="explorar">
+      <h3 class="explorar-title">EXPLORAR</h3>
+      <div class="category-list">
+        <button class="category-button" [routerLink]="['fantasia']">FANTASIA</button>
+        <button class="category-button" [routerLink]="['hombreslobo']">HOMBRES LOBO</button>
+        <button class="category-button" [routerLink]="['noficcion']">NO FICCION</button>
+        <button class="category-button" [routerLink]="['paranormal']">PARANORMAL</button>
+        <button class="category-button" [routerLink]="['suspenso']">SUSPENSO</button>
+        <button class="category-button" [routerLink]="['accion']">ACCION</button>
+        <button class="category-button" [routerLink]="['ciencia-ficcion']">CIENCIA FICCION</button>
+        <button class="category-button" [routerLink]="['espiritual']">ESPIRITUAL</button>
+        <button class="category-button" [routerLink]="['ficcion-general']">FICCION GENERAL</button>
+        <button class="category-button" [routerLink]="['humor']">HUMOR</button>
+        <button class="category-button" [routerLink]="['poesia']">POESIA</button>
+        <button class="category-button" [routerLink]="['aventura']">AVENTURA</button>
+        <button class="category-button" [routerLink]="['clasicos']">CLASICOS</button>
+        <button class="category-button" [routerLink]="['fanfics']">FANFIC</button>
+        <button class="category-button" [routerLink]="['historia-corta']">HISTORIA CORTA</button>
+        <button class="category-button" [routerLink]="['misterio']">MISTERIO</button>
+        <button class="category-button" [routerLink]="['novela-juvenil']">NOVELA JUVENIL</button>
+        <button class="category-button" [routerLink]="['romance']">ROMANCE</button>
+        <button class="category-button" [routerLink]="['vampiros']">VAMPIROS</button>
+      </div>
+    </div>
+  
+    <div id="book-container">
+      <div class="category">
+        <div class="category-title">
+          <label class="recommendations-title">Algunas Recomendaciones</label>
+        </div>
+        <div class="book-cards">
+          <div *ngFor="let book of recommendedBooks" class="book-card">
+            <img [src]="book.image" alt="{{book.title}}">
+            <button class="book-title" [routerLink]="['/libro', book.id]">{{ book.title }}</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="category">
+        <div class="category-title">
+          <label class="recommendations-title">Populares</label>
+        </div>
+        <div class="book-cards">
+          <div *ngFor="let book of popularBooks" class="book-card">
+            <img [src]="book.image" alt="{{book.title}}">
+            <button class="book-title" [routerLink]="['/libro', book.id]">{{ book.title }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

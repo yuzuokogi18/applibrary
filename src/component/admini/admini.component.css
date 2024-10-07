@@ -1,0 +1,81 @@
+/* admin-header.component.css */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #B9935A;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    height: 120px; 
+  }
+  
+  .admin-nav {
+    flex-grow: 1; 
+    text-align: center; 
+  }
+  
+  .admin-nav a {
+    color: white; 
+    text-decoration: none;
+    margin: 0 5px; 
+    font-weight: bold;
+    font-size: 2rem;
+    
+  }
+  
+  .admin-info {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+  }
+  
+  .admin-image {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    margin-right: 10px;
+  }
+  
+  .admin-name {
+    color: white; 
+    font-weight: bold;
+  }
+  .card-container {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+
+.card {
+    background-color: #B9935A; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px; 
+    text-align: center;
+    padding: 20px; 
+}
+
+.card-image {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+}
+.read-button {
+    background-color:  #B9935A; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    font-size: 16px;
+    cursor: pointer; 
+    margin-top: 15px; 
+    transition: background-color 0.3s; 
+  }
+  
+  .read-button:hover {
+    background-color: #31302f; 
+  }

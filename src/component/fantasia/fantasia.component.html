@@ -1,0 +1,23 @@
+<div class="fantasia-section">
+    <h2>Libros de Fantasía</h2>
+  
+    <div class="etiquetas-list">
+      <button 
+        *ngFor="let etiqueta of etiquetas" 
+        class="etiqueta-button" 
+        (click)="filtrarLibrosPorEtiqueta(etiqueta)">
+        {{ etiqueta }}
+      </button>
+    </div>
+  
+    <div class="libros-list">
+      <div *ngFor="let libro of librosFiltrados" class="libro-card">
+        <img [src]="libro.image" alt="{{ libro.title }}">
+        <div class="libro-info">
+          <h3>{{ libro.title }}</h3>
+          <p>{{ libro.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

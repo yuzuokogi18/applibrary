@@ -1,0 +1,36 @@
+<!-- admin-header.component.html -->
+<header class="admin-header">
+    <div class="logo">
+      <img src="assets/libro.png" alt="Logo App Library">
+    </div>
+    <nav class="admin-nav">
+      <button routerLink="/visualizarlibros" class="read-button">
+        Visualizar Libros
+      </button>      
+    </nav>
+    <div class="admin-info">
+      <img src="assets/admini.png" alt="Administrador" class="admin-image" />
+      <span class="admin-name">Administrador</span>
+    </div>
+  </header>
+  <div class="card-container">
+    <div class="card">
+        <img src="assets/agregar.png" alt="AGREGAR" class="card-image" />
+        <button routerLink="/agregar" class="read-button">
+          AGREGAR
+        </button>
+
+    </div>
+    <div class="card">
+        <img src="assets/edit.png" alt="EDITAR" class="card-image" />
+        <button routerLink="/editar/id" class="read-button">
+            EDITAR
+          </button>
+    </div>
+    <div class="card">
+        <img src="assets/elimina.png" alt="ELIMINAR" class="card-image" />
+        <button routerLink="/eliminar/id" class="read-button">
+            ELIMINAR
+          </button>
+    </div>
+</div>

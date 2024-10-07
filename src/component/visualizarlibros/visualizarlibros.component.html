@@ -1,0 +1,18 @@
+<div class="visualizar-libros">
+    <h2>Libros Agregados</h2>
+    
+    <table><thead><tr>
+          <th>Título</th>
+          <th>Autor</th>
+          <th>Género</th>
+          <th>Páginas</th> </tr> </thead> <tbody>
+        <tr *ngFor="let libro of libros">
+          <td>{{ libro.title }}</td>
+          <td>{{ libro.author }}</td>
+          <td>{{ libro.genre }}</td>
+          <td>{{ libro.pageCount }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

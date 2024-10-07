@@ -1,0 +1,19 @@
+<app-header></app-header>
+<h2>Detalles del Libro</h2>
+<div class="book-detail">
+  <div *ngFor="let book of books">
+    <div *ngIf="book.id === bookId"> 
+      <div class="book-content">
+        <img [src]="book.image" alt="{{ book.title }}">
+        <div class="book-description">
+          <h3>{{ book.title }}</h3>
+          <p><strong>Autor:</strong> {{ book.author }}</p>
+          <p><strong>Género:</strong> {{ book.genre }}</p>
+          <p><strong>Número de Páginas:</strong> {{ book.pageCount }}</p>
+          <p>{{ book.description }}</p>
+          <button class="read-button" [routerLink]="['/comenzar-a-leer', book.id]">Comenzar a Leer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
