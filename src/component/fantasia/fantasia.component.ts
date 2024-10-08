@@ -60,9 +60,7 @@ export class FantasiaComponent {
     );
   }
 
-  actualizarFiltro(valor: string) {
-    this.filtroEtiqueta = valor;
-  }
+  
 
   filtrarLibrosPorEtiqueta(etiqueta: string) {
     this.filtroEtiqueta = etiqueta;

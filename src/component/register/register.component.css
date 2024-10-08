@@ -1,63 +1,48 @@
-/* registro.component.css */
-.registro-container {
-    border: 2px solid #000000;
-    border-radius: 8px; 
-    padding: 50px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    max-width: 600px; 
-    margin: 80px auto; 
-    background-color: #b9935a;
-  }
-  
-  .logo {
-    width: 300px; 
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  input[type="text"],
-  input[type="password"],
-  input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-  }
-  
-  button {
-    background-color: #fff;
-    color: #b9935a; 
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  .register-prompt {
-    margin-top: 15px;
-    font-size: 14px; 
-    text-align: center; 
-  }
-  
-  .register-link {
-    color: #083c81; 
-    text-decoration: none; 
-  }
-  
-  .register-link:hover {
-    text-decoration: underline; 
-  }
-  
-  .error {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 5px;
-  }
-  
+.form-container {
+  border: 2px solid #000000;
+  border-radius: 8px; 
+  padding: 50px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  max-width: 600px; 
+  margin: 80px auto; 
+  background-color: #b9935a;
+}
+
+h2 {
+  text-align: center;
+  color: #fff; 
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 5px; 
+}
+
+button {
+  background-color: #fff;
+  color: #b9935a; 
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 50%; 
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.error {
+  color: rgb(207, 199, 199);
+  font-size: 0.9em;
+  margin-top: 5px;
+}

@@ -1,25 +1,36 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { AuthService } from '../service/service.service';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [RouterLink,RouterOutlet,NgIf],
+  imports: [RouterLink, RouterOutlet, NgIf, ReactiveFormsModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  registerForm: FormGroup;
   passwordMismatch: boolean = false;
+  usernameExists: boolean = false;
 
-  onSubmit(event: Event) {
-    event.preventDefault();
+  constructor(private fb: FormBuilder, private authService: AuthService) {
+    this.registerForm = this.fb.group({
+      username: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required]
+    });
+  }
 
-    const form = event.target as HTMLFormElement;
-    const username = (form.querySelector('#username') as HTMLInputElement).value;
-    const email = (form.querySelector('#email') as HTMLInputElement).value;
-    const password = (form.querySelector('#password') as HTMLInputElement).value;
-    const confirmPassword = (form.querySelector('#confirmPassword') as HTMLInputElement).value;
+  onSubmit() {
+    if (this.registerForm.invalid) {
+      return;
+    }
+
+    const { username, email, password, confirmPassword } = this.registerForm.value;
 
     if (password !== confirmPassword) {
       this.passwordMismatch = true;
@@ -27,6 +38,15 @@ export class RegisterComponent {
     }
 
     this.passwordMismatch = false;
+    this.usernameExists = false;
+
+    const result = this.authService.register(username, email, password); 
+
+    if (result === 'usernameExists') {
+      this.usernameExists = true;
+      return;
+    }
+
     alert('¡Usuario Registrado!');
     console.log('Nombre de usuario:', username);
     console.log('Correo electrónico:', email);

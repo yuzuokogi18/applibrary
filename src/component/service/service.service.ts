@@ -21,4 +21,14 @@ export class AuthService {
       return 'invalid';
     }
   }
+
+  register(username: string, email: string, password: string): string {
+    const existingUser = this.users.find(u => u.username === username);
+    if (existingUser) {
+      return 'usernameExists'; 
+    }
+
+    this.users.push({ username, password, role: 'user' });
+    return 'success'; 
+  }
 }
